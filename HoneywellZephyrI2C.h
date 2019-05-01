@@ -37,15 +37,19 @@
 /**************************************************************************/
 class Zephyr_FlowRateSensor
 {
-    const uint8_t _ADDR;     ///< slave select pin (active low)
-    const float _FLOW_RANGE;
-    uint8_t _buf[2];            ///< buffer to hold sensor data
-    int _count = 0;    ///< hold raw flow rate data (14- bits, 0 - 16384)
+    const uint8_t _ADDR;      ///< slave select pin (active low)
+    const float _FLOW_RANGE;  ///< sensor flow rate range
+    uint8_t _buf[2];          ///< buffer to hold sensor data
+    int _count = 0;           ///< hold raw flow rate data (14- bits, 0 - 16384)
 
   public:
     /**************************************************************************/
     /*!
     @brief  Constructs a new flow rate sensor object.
+    @param    address
+              7-bit i2c address of the sensor
+    @param    range
+              the flow rate range of the sensor
     */
     /**************************************************************************/
     Zephyr_FlowRateSensor(uint8_t address, float range)
