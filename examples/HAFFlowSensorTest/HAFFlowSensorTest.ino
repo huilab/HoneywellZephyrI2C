@@ -13,7 +13,7 @@
 #include <HoneywellZephyrI2C.h>
 
 // construct a 50 SCCM sensor with address 0x49
-Zephyr_FlowRateSensor sensor(0x49, 50);
+ZephyrFlowRateSensor sensor(0x49, 50);
 
 void setup() {
   Serial.begin(115200); // start Serial communication

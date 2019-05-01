@@ -35,7 +35,7 @@
     @brief  Class for reading flow rate from a Honeywell Zephyr HAF sensor
 */
 /**************************************************************************/
-class Zephyr_FlowRateSensor
+class ZephyrFlowRateSensor
 {
     const uint8_t _ADDR;      ///< slave select pin (active low)
     const float _FLOW_RANGE;  ///< sensor flow rate range
@@ -52,7 +52,7 @@ class Zephyr_FlowRateSensor
               the flow rate range of the sensor
     */
     /**************************************************************************/
-    Zephyr_FlowRateSensor(uint8_t address, float range)
+    ZephyrFlowRateSensor(uint8_t address, float range)
         : _ADDR(address), _FLOW_RANGE(range) {}
 
     /**************************************************************************/
