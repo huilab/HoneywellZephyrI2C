@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begin',['begin',['../class_zephyr___flow_rate_sensor.html#a9cbfb9ea386392cf743806f3f7063d6b',1,'Zephyr_FlowRateSensor']]]
+  ['begin',['begin',['../class_zephyr_flow_rate_sensor.html#a05aae599e0109e923edc733f283030d7',1,'ZephyrFlowRateSensor']]]
 ];
