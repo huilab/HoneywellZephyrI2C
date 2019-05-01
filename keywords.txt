@@ -1,0 +1,15 @@
+#######################################
+# keywords.txt
+# Provides LabThings Syntax highlighting
+# for Arduino IDE
+#
+# Datatypes (KEYWORD1)
+# Methods and Functions (KEYWORD2)
+# Constants (LITERAL1)
+#######################################
+
+ZephyrFlowRateSensor	KEYWORD1
+begin	KEYWORD2
+readSensor	KEYWORD2
+rawFlow	KEYWORD2
+flow	KEYWORD2
