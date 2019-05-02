@@ -1,5 +1,5 @@
 {
-  "name": "HoneywellZephyrI2C",
+  "name": "Honeywell Zephyr I2C",
   "keywords": "sensor, flow rate, i2c",
   "description": "Arduino library for communicating with Honeywell Zephyr HAF flow rate sensors over I2C",
   "repository":
