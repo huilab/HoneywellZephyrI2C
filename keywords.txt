@@ -1,8 +1,5 @@
 #######################################
 # keywords.txt
-# Provides LabThings Syntax highlighting
-# for Arduino IDE
-#
 # Datatypes (KEYWORD1)
 # Methods and Functions (KEYWORD2)
 # Constants (LITERAL1)
