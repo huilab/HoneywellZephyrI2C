@@ -52,7 +52,7 @@ class ZephyrFlowRateSensor
               the flow rate range of the sensor
     */
     /**************************************************************************/
-    ZephyrFlowRateSensor(uint8_t address, float range)
+    ZephyrFlowRateSensor(const uint8_t address, const float range)
         : _ADDR(address), _FLOW_RANGE(range) {}
 
     /**************************************************************************/
@@ -68,6 +68,7 @@ class ZephyrFlowRateSensor
         delay(17); // start-up time
         // power up sequence: first two reads are serial number
         readSensor(); // two MSB of Sensor
+        
         delay(10);
         readSensor(); // 2 LSB of SN
     }
@@ -108,7 +109,7 @@ class ZephyrFlowRateSensor
     @return  The flow rate value from the most recent reading in raw counts
     */
     /**************************************************************************/
-    int rawFlow() { return _count; }
+    int rawFlow() const { return _count; }
 
 
     /**************************************************************************/
@@ -121,7 +122,7 @@ class ZephyrFlowRateSensor
     @return  The flow rate value from the most recent reading in SCCM
     */
     /**************************************************************************/
-    float flow() { return _FLOW_RANGE * ( ( (float)_count/16384.0) - 0.5)/0.4; }
+    float flow() const { return _FLOW_RANGE * ( ( (float)_count/16384.0) - 0.5)/0.4; }
 };
 
 #endif // End __HONEYWELL_ZEPHYR_I2C_H__ include guard
