@@ -73,9 +73,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:add7a4c5c4e061fd2eda68a029c19153e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#add7a4c5c4e061fd2eda68a029c19153e">ZephyrFlowRateSensor</a> (uint8_t address, float range)</td></tr>
-<tr class="memdesc:add7a4c5c4e061fd2eda68a029c19153e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new flow rate sensor object.  <a href="#add7a4c5c4e061fd2eda68a029c19153e">More...</a><br /></td></tr>
-<tr class="separator:add7a4c5c4e061fd2eda68a029c19153e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07175fec5383289343f66fdfde8e3614"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#a07175fec5383289343f66fdfde8e3614">ZephyrFlowRateSensor</a> (const uint8_t address, const float range)</td></tr>
+<tr class="memdesc:a07175fec5383289343f66fdfde8e3614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new flow rate sensor object.  <a href="#a07175fec5383289343f66fdfde8e3614">More...</a><br /></td></tr>
+<tr class="separator:a07175fec5383289343f66fdfde8e3614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05aae599e0109e923edc733f283030d7"><td class="memItemLeft" align="right" valign="top"><a id="a05aae599e0109e923edc733f283030d7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#a05aae599e0109e923edc733f283030d7">begin</a> ()</td></tr>
 <tr class="memdesc:a05aae599e0109e923edc733f283030d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a pressure sensor object. This function must be called in the Arduino setup() function. Wire.begin() must be called seperately in setup() before the sensor can be used. <br /></td></tr>
@@ -83,18 +83,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a8e5685cf1d59f5afb64534c75eadc184"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184">readSensor</a> ()</td></tr>
 <tr class="memdesc:a8e5685cf1d59f5afb64534c75eadc184"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee that the data retrieved from the sensor is fresh data.  <a href="#a8e5685cf1d59f5afb64534c75eadc184">More...</a><br /></td></tr>
 <tr class="separator:a8e5685cf1d59f5afb64534c75eadc184"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1cbd0003b2df5e4dff2ad69a357d614"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#ae1cbd0003b2df5e4dff2ad69a357d614">rawFlow</a> ()</td></tr>
-<tr class="memdesc:ae1cbd0003b2df5e4dff2ad69a357d614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the most recently polled flow rate value. Update this value by calling <a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184" title="Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee...">readSensor()</a> before reading.  <a href="#ae1cbd0003b2df5e4dff2ad69a357d614">More...</a><br /></td></tr>
-<tr class="separator:ae1cbd0003b2df5e4dff2ad69a357d614"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10f305ebb02292c745234294d8228232"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#a10f305ebb02292c745234294d8228232">flow</a> ()</td></tr>
-<tr class="memdesc:a10f305ebb02292c745234294d8228232"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the most recently polled flow rate value converted to SCCM Update this value by calling <a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184" title="Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee...">readSensor()</a> before reading.  <a href="#a10f305ebb02292c745234294d8228232">More...</a><br /></td></tr>
-<tr class="separator:a10f305ebb02292c745234294d8228232"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1208d76f50ea0a417a20291010a513f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#ac1208d76f50ea0a417a20291010a513f">rawFlow</a> () const</td></tr>
+<tr class="memdesc:ac1208d76f50ea0a417a20291010a513f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the most recently polled flow rate value. Update this value by calling <a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184" title="Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee...">readSensor()</a> before reading.  <a href="#ac1208d76f50ea0a417a20291010a513f">More...</a><br /></td></tr>
+<tr class="separator:ac1208d76f50ea0a417a20291010a513f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a5a79cfe3c346341fb92dfa621d299"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#a61a5a79cfe3c346341fb92dfa621d299">flow</a> () const</td></tr>
+<tr class="memdesc:a61a5a79cfe3c346341fb92dfa621d299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the most recently polled flow rate value converted to SCCM Update this value by calling <a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184" title="Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee...">readSensor()</a> before reading.  <a href="#a61a5a79cfe3c346341fb92dfa621d299">More...</a><br /></td></tr>
+<tr class="separator:a61a5a79cfe3c346341fb92dfa621d299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for reading flow rate from a Honeywell Zephyr HAF sensor. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="add7a4c5c4e061fd2eda68a029c19153e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add7a4c5c4e061fd2eda68a029c19153e">&#9670;&nbsp;</a></span>ZephyrFlowRateSensor()</h2>
+<a id="a07175fec5383289343f66fdfde8e3614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07175fec5383289343f66fdfde8e3614">&#9670;&nbsp;</a></span>ZephyrFlowRateSensor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -105,13 +105,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
         <tr>
           <td class="memname">ZephyrFlowRateSensor::ZephyrFlowRateSensor </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramtype">const uint8_t&#160;</td>
           <td class="paramname"><em>address</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
+          <td class="paramtype">const float&#160;</td>
           <td class="paramname"><em>range</em>&#160;</td>
         </tr>
         <tr>
@@ -167,8 +167,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="ae1cbd0003b2df5e4dff2ad69a357d614"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1cbd0003b2df5e4dff2ad69a357d614">&#9670;&nbsp;</a></span>rawFlow()</h2>
+<a id="ac1208d76f50ea0a417a20291010a513f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1208d76f50ea0a417a20291010a513f">&#9670;&nbsp;</a></span>rawFlow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -180,7 +180,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">int ZephyrFlowRateSensor::rawFlow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -195,8 +195,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="a10f305ebb02292c745234294d8228232"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10f305ebb02292c745234294d8228232">&#9670;&nbsp;</a></span>flow()</h2>
+<a id="a61a5a79cfe3c346341fb92dfa621d299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61a5a79cfe3c346341fb92dfa621d299">&#9670;&nbsp;</a></span>flow()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -208,7 +208,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="memname">float ZephyrFlowRateSensor::flow </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
