@@ -59,6 +59,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="class_zephyr_flow_rate_sensor-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -71,11 +72,19 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="_honeywell_zephyr_i2_c_8h_source.html">HoneywellZephyrI2C.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:acee74752e8560b117824e441282ce70f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70f">SensorType</a> : uint8_t { <a class="el" href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70fae9b5fe45e70258bf3266e7b079207739">SCCM</a> = 0, 
+<a class="el" href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70fa6e6f460dcbd13d052aebbd5a2feb1f7b">SLPM</a> = 1
+ }<tr class="memdesc:acee74752e8560b117824e441282ce70f"><td class="mdescLeft">&#160;</td><td class="mdescRight">An enumerator to define the type of HAF sensor.  <a href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70f">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:acee74752e8560b117824e441282ce70f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a07175fec5383289343f66fdfde8e3614"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#a07175fec5383289343f66fdfde8e3614">ZephyrFlowRateSensor</a> (const uint8_t address, const float range)</td></tr>
-<tr class="memdesc:a07175fec5383289343f66fdfde8e3614"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new flow rate sensor object.  <a href="#a07175fec5383289343f66fdfde8e3614">More...</a><br /></td></tr>
-<tr class="separator:a07175fec5383289343f66fdfde8e3614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72aa3982f3884546527f1ddcb1ae62b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#ad72aa3982f3884546527f1ddcb1ae62b">ZephyrFlowRateSensor</a> (const uint8_t address, const float range, const <a class="el" href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70f">SensorType</a> type=<a class="el" href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70fae9b5fe45e70258bf3266e7b079207739">SCCM</a>)</td></tr>
+<tr class="memdesc:ad72aa3982f3884546527f1ddcb1ae62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a new flow rate sensor object.  <a href="#ad72aa3982f3884546527f1ddcb1ae62b">More...</a><br /></td></tr>
+<tr class="separator:ad72aa3982f3884546527f1ddcb1ae62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05aae599e0109e923edc733f283030d7"><td class="memItemLeft" align="right" valign="top"><a id="a05aae599e0109e923edc733f283030d7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#a05aae599e0109e923edc733f283030d7">begin</a> ()</td></tr>
 <tr class="memdesc:a05aae599e0109e923edc733f283030d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a pressure sensor object. This function must be called in the Arduino setup() function. Wire.begin() must be called seperately in setup() before the sensor can be used. <br /></td></tr>
@@ -87,14 +96,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memdesc:ac1208d76f50ea0a417a20291010a513f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the most recently polled flow rate value. Update this value by calling <a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184" title="Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee...">readSensor()</a> before reading.  <a href="#ac1208d76f50ea0a417a20291010a513f">More...</a><br /></td></tr>
 <tr class="separator:ac1208d76f50ea0a417a20291010a513f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61a5a79cfe3c346341fb92dfa621d299"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_zephyr_flow_rate_sensor.html#a61a5a79cfe3c346341fb92dfa621d299">flow</a> () const</td></tr>
-<tr class="memdesc:a61a5a79cfe3c346341fb92dfa621d299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the most recently polled flow rate value converted to SCCM Update this value by calling <a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184" title="Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee...">readSensor()</a> before reading.  <a href="#a61a5a79cfe3c346341fb92dfa621d299">More...</a><br /></td></tr>
+<tr class="memdesc:a61a5a79cfe3c346341fb92dfa621d299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the most recently polled flow rate value converted to either SCCM or SLPM depending on the sensor type.  <a href="#a61a5a79cfe3c346341fb92dfa621d299">More...</a><br /></td></tr>
 <tr class="separator:a61a5a79cfe3c346341fb92dfa621d299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class for reading flow rate from a Honeywell Zephyr HAF sensor. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a07175fec5383289343f66fdfde8e3614"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07175fec5383289343f66fdfde8e3614">&#9670;&nbsp;</a></span>ZephyrFlowRateSensor()</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="acee74752e8560b117824e441282ce70f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acee74752e8560b117824e441282ce70f">&#9670;&nbsp;</a></span>SensorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70f">ZephyrFlowRateSensor::SensorType</a> : uint8_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An enumerator to define the type of HAF sensor. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acee74752e8560b117824e441282ce70fae9b5fe45e70258bf3266e7b079207739"></a>SCCM&#160;</td><td class="fielddoc"><p>sensor reports values in SCCM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="acee74752e8560b117824e441282ce70fa6e6f460dcbd13d052aebbd5a2feb1f7b"></a>SLPM&#160;</td><td class="fielddoc"><p>sensor reports values in SLPM </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad72aa3982f3884546527f1ddcb1ae62b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72aa3982f3884546527f1ddcb1ae62b">&#9670;&nbsp;</a></span>ZephyrFlowRateSensor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -112,7 +144,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const float&#160;</td>
-          <td class="paramname"><em>range</em>&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70f">SensorType</a>&#160;</td>
+          <td class="paramname"><em>type</em> = <code><a class="el" href="class_zephyr_flow_rate_sensor.html#acee74752e8560b117824e441282ce70fae9b5fe45e70258bf3266e7b079207739">SCCM</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -132,6 +170,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   <table class="params">
     <tr><td class="paramname">address</td><td>7-bit i2c address of the sensor </td></tr>
     <tr><td class="paramname">range</td><td>the flow rate range of the sensor </td></tr>
+    <tr><td class="paramname">type</td><td>the type of sensor (SCCM or SLPM) </td></tr>
   </table>
   </dd>
 </dl>
@@ -218,9 +257,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 </div><div class="memdoc">
 
-<p>Read the most recently polled flow rate value converted to SCCM Update this value by calling <a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184" title="Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee...">readSensor()</a> before reading. </p>
-<p>Flow Applied = Full Scale Flow * [(Digital Output Code/16384) - 0.5]/0.4</p>
-<dl class="section return"><dt>Returns</dt><dd>The flow rate value from the most recent reading in SCCM </dd></dl>
+<p>Read the most recently polled flow rate value converted to either SCCM or SLPM depending on the sensor type. </p>
+<p>Update this value by calling <a class="el" href="class_zephyr_flow_rate_sensor.html#a8e5685cf1d59f5afb64534c75eadc184" title="Attempts to read two bytes from the sensor. The raw flow rate count is updated. Makes is no guanantee...">readSensor()</a> before reading.</p>
+<p>For SCCM sensors: Flow Applied = Full Scale Flow * [(Digital Output Code/16384) - 0.5]/0.4</p>
+<p>For SLPM sensors: Flow Applied = Full Scale Flow * [(Digital Output Code/16384) - 0.1]/0.8</p>
+<dl class="section return"><dt>Returns</dt><dd>The flow rate value from the most recent reading in the units of the sensor (SCCM or SLPM) </dd></dl>
 
 </div>
 </div>
