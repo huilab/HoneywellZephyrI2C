@@ -20,6 +20,9 @@
  * This library depends on the  <a href="https://www.arduino.cc/en/Reference/Wire">
  * Arduino Wire library</a>, included in a standard Arduino installation.
  *
+ * @section version Version
+ * 1.1
+ * 
  * @section author Author
  *
  * Written by Erik Werner for the Hui Lab.
@@ -37,12 +40,12 @@
 /**************************************************************************/
 class ZephyrFlowRateSensor
 {
-    const uint8_t _ADDR;      ///< slave select pin (active low)
-    const float _FLOW_RANGE;  ///< sensor flow rate range
-    uint8_t _buf[2];          ///< buffer to hold sensor data
-    int _count = 0;           ///< hold raw flow rate data (14- bits, 0 - 16384)
-
   public:
+    /// An enumerator to define the type of HAF sensor
+    enum SensorType : uint8_t {
+        SCCM = 0, ///< sensor reports values in SCCM
+        SLPM = 1 ///< sensor reports values in SLPM
+    };
     /**************************************************************************/
     /*!
     @brief  Constructs a new flow rate sensor object.
@@ -50,10 +53,12 @@ class ZephyrFlowRateSensor
               7-bit i2c address of the sensor
     @param    range
               the flow rate range of the sensor
+    @param    type
+              the type of sensor (SCCM or SLPM)
     */
     /**************************************************************************/
-    ZephyrFlowRateSensor(const uint8_t address, const float range)
-        : _ADDR(address), _FLOW_RANGE(range) {}
+    ZephyrFlowRateSensor(const uint8_t address, const float range, const SensorType type = SCCM)
+        : _ADDR(address), _FLOW_RANGE(range), _type(type) {}
 
     /**************************************************************************/
     /*!
@@ -114,15 +119,29 @@ class ZephyrFlowRateSensor
 
     /**************************************************************************/
     /*!
-    @brief  Read the most recently polled flow rate value converted to SCCM
+    @brief  Read the most recently polled flow rate value converted to either SCCM or
+        SLPM depending on the sensor type.
+
         Update this value by calling readSensor() before reading.
 
+        For SCCM sensors:
         Flow Applied = Full Scale Flow * [(Digital Output Code/16384) - 0.5]/0.4
 
-    @return  The flow rate value from the most recent reading in SCCM
+        For SLPM sensors:
+        Flow Applied = Full Scale Flow * [(Digital Output Code/16384) - 0.1]/0.8
+
+    @return  The flow rate value from the most recent reading in the units of the sensor (SCCM or SLPM)
     */
     /**************************************************************************/
-    float flow() const { return _FLOW_RANGE * ( ( (float)_count/16384.0) - 0.5)/0.4; }
+    float flow() const { return _type == SCCM ? 
+                                _FLOW_RANGE * ( ( (float)_count/16384.0) - 0.5) * 2.5 :
+                                _FLOW_RANGE * ( ( (float)_count/16384.0) - 0.1) * 1.25; }
+  private:
+    const uint8_t _ADDR;      ///< slave select pin (active low)
+    const float _FLOW_RANGE;  ///< sensor flow rate range
+    uint8_t _buf[2];          ///< buffer to hold sensor data
+    int _count = 0;           ///< hold raw flow rate data (14- bits, 0 - 16384)
+    SensorType _type;         ///< the sensor type is used to select the algorithm to convert counts to flow rate
 };
 
 #endif // End __HONEYWELL_ZEPHYR_I2C_H__ include guard

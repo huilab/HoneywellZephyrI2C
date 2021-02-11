@@ -1,13 +1,13 @@
 {
   "name": "Honeywell Zephyr I2C",
   "keywords": "sensor, flow rate, i2c",
-  "description": "Arduino library for communicating with Honeywell Zephyr HAF flow rate sensors over I2C",
+  "description": "Arduino library for Honeywell Zephyr HAF flow rate sensors using I2C",
   "repository":
   {
     "type": "git",
     "url": "https://github.com/huilab/HoneywellZephyrI2C.git"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "frameworks": "arduino",
   "platforms":
   [

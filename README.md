@@ -1,7 +1,7 @@
 # Honeywell Zephyr I2C  [![Build Status](https://travis-ci.org/huilab/HoneywellZephyrI2C.svg?branch=master)](https://travis-ci.org/huilab/HoneywellZephyrI2C)
 An Arduino library for communicating with Honeywell Zephyr HAF digital flow rate sensors over I2C.
 
-Based on the Honeywell datasheets at: https://sensing.honeywell.com/sensors/airflow-sensors/HAF-high-accuracy-50SCCM-750SCCM-series. There is a also a copy of the datasheet in this repository.
+Based on the Honeywell datasheets at: https://sensing.honeywell.com/sensors/airflow-sensors/HAF-high-accuracy-50SCCM-750SCCM-series and https://sensing.honeywell.com/honeywell-sensing-zephyr-digital-airflow-10-slpm-300-slpm-datasheet-008268-5-en.pdf
 
 #### View the documentation
 https://huilab.github.io/HoneywellZephyrI2C/
@@ -18,7 +18,7 @@ Include the library and declare a sensor:
 ```C
 #include <HoneywellZephyrI2C.h>
 // construct a 50 SCCM sensor with address 0x49
-ZephyrFlowRateSensor sensor( 0x49, 50 );
+ZephyrFlowRateSensor sensor( 0x49, 50, ZephyrFlowRateSensor::SCCM );
 ```
 Initialize the sensor in `void setup()` :
 ```C

@@ -5,6 +5,8 @@
 # Constants (LITERAL1)
 #######################################
 
+SCCM LITERAL1
+SLPM LITERAL1
 ZephyrFlowRateSensor	KEYWORD1
 begin	KEYWORD2
 readSensor	KEYWORD2
